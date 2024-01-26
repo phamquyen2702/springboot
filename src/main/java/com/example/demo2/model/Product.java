@@ -1,10 +1,13 @@
 package com.example.demo2.model;
 
+import com.example.demo2.listener.ProductListener;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "product")
+@EntityListeners(ProductListener.class)
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
