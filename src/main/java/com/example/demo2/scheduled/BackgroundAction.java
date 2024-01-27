@@ -18,8 +18,8 @@ public class BackgroundAction {
     @Scheduled(fixedRate = 10000000)
     public void logDemo(){
         try {
-            mailService.sendEmail();
-            log.info("Sent to mimino585584@gmail.com");
+           // mailService.sendEmail();
+           // log.info("Sent to mimino585584@gmail.com");
         } catch (MailException mailException) {
             log.error("Can't send mail", mailException);
         }
