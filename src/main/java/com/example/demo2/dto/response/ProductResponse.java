@@ -1,8 +1,15 @@
 package com.example.demo2.dto.response;
 
 import com.example.demo2.model.Product;
+import lombok.Data;
+import org.springframework.data.redis.core.RedisHash;
 
+import javax.persistence.Id;
+
+@Data
+@RedisHash("ProductResponse")
 public class ProductResponse {
+    @Id
     private Long id;
     private String title;
     private String detail;

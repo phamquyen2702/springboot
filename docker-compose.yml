@@ -19,7 +19,6 @@ services:
       REDIS_HOST: redis-container
       REDIS_PORT: 6379
       SPRING_APPLICATION_JSON: '{
-            "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
             "spring.jpa.hibernate.ddl-auto" : "update",
             "spring.datasource.driver-class-name":"com.mysql.cj.jdbc.Driver",
             "spring.jpa.hibernate.ddl-auto":"update",

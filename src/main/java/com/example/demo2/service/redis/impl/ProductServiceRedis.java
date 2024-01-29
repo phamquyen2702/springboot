@@ -5,8 +5,6 @@ import com.example.demo2.service.redis.IProductServiceRedis;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -20,7 +18,6 @@ public class ProductServiceRedis implements IProductServiceRedis {
     private  RedisTemplate<String, Object> redisTemplate;
     @Autowired
     private ObjectMapper redisObjectMapper;
-
 
     private String getKeyFrom(Pageable pageable) {
         int page = pageable.getPageNumber();
