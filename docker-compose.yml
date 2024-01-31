@@ -73,6 +73,19 @@ services:
     networks:
       - network-one
 
+  runner:
+    image: myoung34/github-runner:lastest
+    restart: always
+    volumes:
+      - //var/run/docker.sock:/var/run/docker.sock
+    environment:
+      RUNNER_SCOPE: repo
+      RUNNER_NAME_PREFIX: myrunner
+      LABELS: some-label
+      REPO_URL: https://github.com/phamquyen2702/springboot.git
+      EPHEMERAL: 1
+      ACCESS_TOKEN: <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>
+
 networks:
   network-one:
 
